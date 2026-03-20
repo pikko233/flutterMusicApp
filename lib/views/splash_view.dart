@@ -38,7 +38,7 @@ class _SplashViewState extends State<SplashView> {
           Padding(
             padding: const EdgeInsets.only(bottom: 40),
             child: Text(
-              "Powered by Spotify Api",
+              "Powered by NeteaseCloudMusicApi",
               style: TextStyle(color: AppColors.textPrimary60),
             ),
           ),

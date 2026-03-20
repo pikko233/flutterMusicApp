@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_music_app/constants/app_colors.dart';
+import 'package:get/get.dart';
 
 class SearchView extends StatefulWidget {
   const SearchView({super.key});
@@ -22,7 +23,13 @@ class _SearchViewState extends State<SearchView> {
               Expanded(
                 child: TextField(
                   onSubmitted: (value) {
-                    print(value);
+                    print('搜索框输入: $value');
+                    if (value.trim() != '') {
+                      Get.toNamed(
+                        '/search_result',
+                        arguments: {'keyword': value},
+                      );
+                    }
                   },
                   style: TextStyle(color: AppColors.textPrimary),
                   decoration: InputDecoration(

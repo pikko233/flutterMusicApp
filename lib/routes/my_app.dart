@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_music_app/constants/app_routes.dart';
 import 'package:flutter_music_app/constants/app_theme.dart';
 import 'package:flutter_music_app/views/main/main_view.dart';
+import 'package:flutter_music_app/views/search/search_result_view.dart';
 import 'package:flutter_music_app/views/splash_view.dart';
 import 'package:get/get.dart';
 
@@ -13,10 +15,14 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Music App',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.darkTheme,
-      initialRoute: '/splash',
+      initialRoute: AppRoutes.splash,
       getPages: [
-        GetPage(name: '/splash', page: () => const SplashView()),
-        GetPage(name: '/main', page: () => const MainView()),
+        GetPage(name: AppRoutes.splash, page: () => const SplashView()),
+        GetPage(name: AppRoutes.main, page: () => const MainView()),
+        GetPage(
+          name: AppRoutes.searchResult,
+          page: () => const SearchResultView(),
+        ),
       ],
     );
   }
