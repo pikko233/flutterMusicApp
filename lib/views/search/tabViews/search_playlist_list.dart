@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_music_app/constants/app_routes.dart';
 import 'package:flutter_music_app/widgets/search_playlist_cell.dart';
 import 'package:flutter_music_app/widgets/search_result_count.dart';
 import 'package:flutter_music_app/widgets/search_singer_cell.dart';
+import 'package:get/get.dart';
 
 class SearchPlaylistList extends StatelessWidget {
   const SearchPlaylistList({super.key});
@@ -31,6 +33,7 @@ class SearchPlaylistList extends StatelessWidget {
                 subtitle: "286首 • 播放量1.2亿",
                 onPressed: () {
                   print("跳转至歌单详情页");
+                  Get.toNamed(AppRoutes.playlistDetail);
                 },
                 onPressedPlay: () {
                   print("播放歌单的第一首歌，并将歌单列表替换为当前播放列表");

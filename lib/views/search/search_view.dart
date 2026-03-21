@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_music_app/constants/app_colors.dart';
+import 'package:flutter_music_app/constants/app_routes.dart';
 import 'package:get/get.dart';
 
 class SearchView extends StatefulWidget {
@@ -26,7 +27,7 @@ class _SearchViewState extends State<SearchView> {
                     print('搜索框输入: $value');
                     if (value.trim() != '') {
                       Get.toNamed(
-                        '/search_result',
+                        AppRoutes.searchResult,
                         arguments: {'keyword': value},
                       );
                     }
